@@ -122,34 +122,34 @@
 
 						<!-- Contact -->
 							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
+							<h2 class="major">Contact</h2>
+							<form method="post" onsubmit="sendEmail(event)">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://www.facebook.com/kay297/" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/kay.v_297/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.linkedin.com/in/kha-kay-vu/" class="icon brands fa-linkedin" target="_blank"><span class="label">Instagram</span></a></li>
-									<li><a href="https://github.com/kayv297" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
 								</ul>
-							</article>
+							</form>
+							<ul class="icons">
+								<li><a href="https://www.facebook.com/kay297/" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/kay.v_297/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+								<li><a href="https://www.linkedin.com/in/kha-kay-vu/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/kayv297" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+							</ul>
+						</article>
 
 						<!-- Elements -->
 							<article id="elements">
@@ -417,6 +417,25 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						alert('For a better experience, please view in horizontal (landscape) mode.');
 					}
 				});
+			</script>
+			<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+			<script type="text/javascript">
+				(function(){
+					emailjs.init("XgAzX7TZ9Had-QReY"); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+				})();
+				
+				function sendEmail(event) {
+					event.preventDefault(); // Prevent form submission
+					const form = event.target;
+					emailjs.sendForm('service_hh03sh5', 'template_ff1uo6c', form)
+						.then(function(response) {
+							console.log('SUCCESS!', response.status, response.text);
+							alert("Message sent successfully!");
+						}, function(error) {
+							console.log('FAILED...', error);
+							alert("Failed to send message. Please try again later.");
+						});
+				}
 			</script>
 
 	</body>
