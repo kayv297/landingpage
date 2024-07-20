@@ -1,0 +1,51 @@
+[
+  {
+      "title": "Làm sạch dữ liệu trong SQL",
+      "description": "Trong dự án này, tôi đã sử dụng SQL để làm sạch và tổ chức một tập dữ liệu nhà ở Nashville. Các nhiệm vụ chính bao gồm định dạng lại các giá trị không nhất quán để đồng nhất, loại bỏ các mục trùng lặp để đảm bảo dữ liệu chính xác và điền các giá trị thiếu để tránh khoảng trống.<br><br> Ngoài ra, tôi đã tách dữ liệu nhóm thành các cột riêng lẻ, làm cho tập dữ liệu dễ đọc và phân tích hơn. Dự án này nêu bật kỹ năng SQL của tôi trong việc làm sạch dữ liệu và sự chú ý đến chi tiết trong việc chuẩn bị dữ liệu cho phân tích.",
+      "imageSrc": "images/datacleaning.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/blob/main/SQL_Data_Cleaning_Project/"
+  },
+  {
+      "title": "Khám phá dữ liệu COVID-19 trong SQL",
+      "description": "Trong dự án này, tôi đã sử dụng SQL để khám phá một tập dữ liệu COVID-19 toàn diện, tập trung vào việc phát hiện thông tin chi tiết và phân tích mối tương quan. Tôi đã viết các truy vấn để trích xuất các thông tin giá trị về tỷ lệ nhiễm bệnh theo ngày, khu vực và dân số.<br><br>Một phần quan trọng của dự án liên quan đến việc xem xét mối tương quan giữa số ca tử vong và số lượng tiêm chủng. Bằng cách phân tích mối quan hệ này, tôi đã xác định được các xu hướng và mô hình nêu bật hiệu quả của các nỗ lực tiêm chủng. Dự án này thể hiện khả năng sử dụng SQL của tôi để khám phá dữ liệu và rút ra những hiểu biết có ý nghĩa từ các tập dữ liệu phức tạp.",
+      "imageSrc": "images/covid.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/blob/main/SQL_Covid_Data_Exploration_Project/"
+  },
+  {
+      "title": "Trình phân loại tệp trong Python",
+      "description": "Trong dự án này, tôi đã phát triển một script Python để tự động tổ chức các tệp dựa trên loại của chúng. Script này quét một thư mục được chỉ định, xác định các loại tệp như tài liệu, hình ảnh, video và nhiều loại khác, sau đó di chuyển mỗi tệp vào một thư mục tương ứng. Quy trình tự động này giúp duy trì hệ thống tệp gọn gàng và có tổ chức.",
+      "imageSrc": "images/filesort.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/tree/main/Python_FileSorter"
+  },
+  {
+      "title": "Trình thu thập dữ liệu sản phẩm Amazon trong Python",
+      "description": "Trong dự án này, tôi đã phát triển một script Python để thu thập dữ liệu về một sản phẩm cụ thể được liệt kê trên Amazon. Script này trích xuất các thông tin cần thiết như giá cả, đánh giá, xếp hạng và chi tiết người bán từ trang sản phẩm. Dữ liệu này sau đó được cấu trúc và thêm vào một tệp CSV, cho phép theo dõi và phân tích dễ dàng theo thời gian.",
+      "imageSrc": "images/amz.png",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/tree/main/Python_FileSorter"
+  },
+  {
+      "title": "Trình thu thập dữ liệu tiền mã hóa trong Python",
+      "description": "Trong dự án này, tôi đã phát triển một script Python để lấy dữ liệu thời gian thực của các loại tiền mã hóa bằng cách thực hiện các cuộc gọi API đến một nền tảng trao đổi. Script này thu thập các thông tin cần thiết như giá hiện tại, khối lượng giao dịch, vốn hóa thị trường và nhiều thông tin khác cho nhiều loại tiền mã hóa (có thể được định nghĩa trước). Dữ liệu này sau đó được cấu trúc và thêm vào một tệp CSV, cung cấp một phương pháp thuận tiện để theo dõi và phân tích xu hướng thị trường tiền mã hóa.",
+      "imageSrc": "images/crypto.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/tree/main/Python_CryptoScraping"
+  },
+  {
+      "title": "Báo cáo khảo sát nghề nghiệp dữ liệu trong Power BI",
+      "description": "Trong dự án này, tôi đã sử dụng Power BI để tạo một báo cáo toàn diện dựa trên dữ liệu khảo sát đánh giá mức độ hài lòng của cá nhân với các công việc liên quan đến dữ liệu của họ. Báo cáo bao gồm các hình ảnh trực quan như biểu đồ, đồ thị và bảng điều khiển tương tác để trình bày các thông tin chính được trích xuất từ các phản hồi khảo sát. Các hình ảnh trực quan này cung cấp sự hiểu biết rõ ràng về các yếu tố ảnh hưởng đến sự hài lòng trong công việc, bao gồm mức lương, cân bằng công việc-cuộc sống, cơ hội phát triển nghề nghiệp và nhiều yếu tố khác.",
+      "imageSrc": "images/survey.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/tree/main/PowerBI_SurveyReport_Project"
+  },
+  {
+      "title": "Khám phá dữ liệu Airbnb của Seattle năm 2016 trong Tableau",
+      "description": "Trong dự án này, tôi đã sử dụng Tableau để tạo một báo cáo chi tiết về dữ liệu Airbnb của Seattle từ năm 2016. Báo cáo cung cấp các thông tin chi tiết về nhiều khía cạnh của thị trường Airbnb ở Seattle, bao gồm giá thuê, tình trạng sẵn có và các khu vực phổ biến. Thông qua các hình ảnh trực quan tương tác như bản đồ, biểu đồ và bộ lọc, người dùng có thể khám phá các xu hướng và mô hình trong tập dữ liệu, cho phép họ đưa ra các quyết định thông minh về các tùy chọn chỗ ở tại Seattle.",
+      "imageSrc": "images/airbnb.jpg",
+      "altText": "",
+      "projectLink": "https://public.tableau.com/app/profile/kha.vu/viz/Airbnb2016SeattleData/FinalDashboard#1"
+  }
+]

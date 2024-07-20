@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Data Cleaning in SQL",
+      "postcontent": "Additionally, I split grouped data into individual columns, making the dataset easier to read and analyze. This project highlights my SQL skills in data cleaning and my attention to detail in preparing data for analysis. Additionally, I split grouped data into individual columns, making the dataset easier to read and analyze. This project highlights my SQL skills in data cleaning and my attention to detail in preparing data for analysis.",
+      "altText": "",
+      "date": "2021-09-01",
+      "tags": ["SQL", "Data Cleaning", "Python", "C++", "Algorithm", "Node.js"]
+    },
+    {
+        "title": "COVID-19 Data Exploration in SQL",
+        "postcontent": "A significant part of the project involved examining the correlation between deaths and vaccination counts. By analyzing this relationship, I identified trends and patterns that highlight the effectiveness of vaccination efforts. This project showcases my ability to use SQL for data exploration and derive meaningful insights from complex datasets.",
+        "altText": "",
+        "date": "2021-08-01",
+        "tags": ["SQL", "Data Exploration"]
+    }
+  ]

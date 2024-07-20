@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kay Vu Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!--Language Selector-->
+			<div class="language-dropdown">
+				<select id="languageSelect" onchange="changeLanguage(this.value)">
+				<option value="en">EN</option>
+				<option value="vi">VI</option>
+				<option value="ja" selected>JP</option>
+				</select>
+			</div>
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header", class="blog-header">
+				<h1>建設中。。。&#128208;</h1>
+			</header>
+
+			<!-- Main -->
+				
+
+			<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; 2024, Built by Kay Vu</p>
+				</footer>
+
+		</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				document.getElementById('about-link').addEventListener('click', function(event) {
+					if (window.innerWidth < window.innerHeight) {
+						alert('For a better experience, please view in horizontal (landscape) mode.');
+					}
+				});
+			</script>
+			<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+			<script type="text/javascript">
+				(function(){
+					emailjs.init("XgAzX7TZ9Had-QReY"); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+				})();
+				
+				function sendEmail(event) {
+					event.preventDefault(); // Prevent form submission
+					const form = event.target;
+					emailjs.sendForm('service_hh03sh5', 'template_ff1uo6c', form)
+						.then(function(response) {
+							console.log('SUCCESS!', response.status, response.text);
+							alert("Message sent successfully!");
+						}, function(error) {
+							console.log('FAILED...', error);
+							alert("Failed to send message. Please try again later.");
+						});
+				}
+				function changeLanguage(language) {
+					switch(language) {
+						case 'en':
+						window.location.href = 'index.html'; // Replace with your actual English page URL
+						break;
+						case 'vi':
+						window.location.href = 'vi_index.html'; // Replace with your actual Vietnamese page URL
+						break;
+						case 'ja':
+						window.location.href = 'jp_index.html'; // Replace with your actual Japanese page URL
+						break;
+						default:
+						console.log("Language not supported.");
+					}
+				}
+			</script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const projectButton = document.querySelector('a[href="#work"]');
+					const workArticle = document.getElementById('work');
+		
+					projectButton.addEventListener('click', function() {
+						fetch('projects.json') // Adjust the path to where your JSON file is stored
+							.then(response => response.json())
+							.then(projectsData => {
+								// Clear existing content
+								workArticle.innerHTML = '<h2 class="major">project</h2>';
+								
+								// Iterate over each project in the JSON data
+								projectsData.forEach(project => {
+									// Create elements for the project
+									const visualimg = document.createElement('span');
+									visualimg.className = 'image main';
+									visualimg.innerHTML = '<img src="' + project.imageSrc + '" alt="" />';
+
+									const titleElement = document.createElement('h3');
+									titleElement.textContent = project.title;
+		
+									const descriptionElement = document.createElement('p');
+									descriptionElement.innerHTML = project.description; // Using innerHTML to parse <br> tags
+		
+									const linkElement = document.createElement('a');
+									linkElement.href = project.projectLink;
+									linkElement.textContent = 'View Project';
+									linkElement.className = 'button';
+									linkElement.style = 'display: inline-block; margin: 0 auto;';
+									linkElement.target = '_blank';
+
+									const linkContainer = document.createElement('div');
+									linkContainer.style = 'text-align: center;';
+									linkContainer.appendChild(linkElement);
+									
+									const hr = document.createElement('hr');
+									hr.className = 'separator';
+									// Append elements to the work article
+									workArticle.appendChild(visualimg);
+									workArticle.appendChild(titleElement);
+									workArticle.appendChild(descriptionElement);
+									workArticle.appendChild(linkContainer);
+									workArticle.appendChild(hr);
+								});
+							})
+							.catch(error => {
+								console.error('Error loading project data:', error);
+								workArticle.innerHTML = '<p>Error loading project data.</p>';
+							});
+					});
+				});
+			</script>
+
+	</body>
+</html>

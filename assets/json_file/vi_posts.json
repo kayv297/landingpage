@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Làm sạch dữ liệu trong SQL",
+        "postcontent": "Ngoài ra, tôi đã tách dữ liệu nhóm thành các cột riêng lẻ, làm cho tập dữ liệu dễ đọc và phân tích hơn. Dự án này nêu bật kỹ năng SQL của tôi trong việc làm sạch dữ liệu và sự chú ý đến chi tiết trong việc chuẩn bị dữ liệu cho phân tích. Ngoài ra, tôi đã tách dữ liệu nhóm thành các cột riêng lẻ, làm cho tập dữ liệu dễ đọc và phân tích hơn. Dự án này nêu bật kỹ năng SQL của tôi trong việc làm sạch dữ liệu và sự chú ý đến chi tiết trong việc chuẩn bị dữ liệu cho phân tích.",
+        "altText": "",
+        "date": "2021-09-01",
+        "tags": ["SQL", "Làm sạch dữ liệu", "Python", "C++", "Thuật toán", "Node.js"]
+    },
+    {
+        "title": "Khám phá dữ liệu COVID-19 trong SQL",
+        "postcontent": "Một phần quan trọng của dự án liên quan đến việc xem xét mối tương quan giữa số ca tử vong và số lượng tiêm chủng. Bằng cách phân tích mối quan hệ này, tôi đã xác định được các xu hướng và mô hình nêu bật hiệu quả của các nỗ lực tiêm chủng. Dự án này thể hiện khả năng sử dụng SQL của tôi để khám phá dữ liệu và rút ra những hiểu biết có ý nghĩa từ các tập dữ liệu phức tạp.",
+        "altText": "",
+        "date": "2021-08-01",
+        "tags": ["SQL", "Khám phá dữ liệu"]
+    }
+]

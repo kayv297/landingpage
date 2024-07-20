@@ -1,0 +1,51 @@
+[
+    {
+      "title": "Data Cleaning in SQL",
+      "description": "In this project, I used SQL to clean and organize a Nashville housing dataset. Key tasks included reformatting inconsistent values for uniformity, removing duplicate entries to ensure accurate data, and populating missing values to prevent gaps.<br><br> Additionally, I split grouped data into individual columns, making the dataset easier to read and analyze. This project highlights my SQL skills in data cleaning and my attention to detail in preparing data for analysis.",
+      "imageSrc": "images/datacleaning.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/blob/main/SQL_Data_Cleaning_Project/"
+    },
+    {
+        "title": "COVID-19 Data Exploration in SQL",
+        "description": "In this project, I utilized SQL to explore a comprehensive COVID-19 dataset, focusing on uncovering insights and analyzing correlations. I wrote queries to extract valuable insights on infection rate by date, regions, and population.<br><br>A significant part of the project involved examining the correlation between deaths and vaccination counts. By analyzing this relationship, I identified trends and patterns that highlight the effectiveness of vaccination efforts. This project showcases my ability to use SQL for data exploration and derive meaningful insights from complex datasets.",
+        "imageSrc": "images/covid.jpg",
+        "altText": "",
+        "projectLink": "https://github.com/kayv297/DataPortfolioProject/blob/main/SQL_Covid_Data_Exploration_Project/"
+    },
+    {
+      "title": "File Categorizer in Python",
+      "description": "In this project, I developed a Python script to automatically organize files based on their types. The script scans a specified directory, identifies file types such as documents, images, videos, and more, and then moves each file into a corresponding folder. This automated process helps maintain a tidy and well-organized file system.",
+      "imageSrc": "images/filesort.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/tree/main/Python_FileSorter"
+    },
+    {
+      "title": "Amazon Product Data Scraper in Python",
+      "description": "In this project, I developed a Python script to scrape data about a specific product listed on Amazon. The script extracts essential information such as price, reviews, ratings, and seller details from the product's webpage. This data is then structured and appended to a CSV file, allowing for easy tracking and analysis over time.",
+      "imageSrc": "images/amz.png",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/tree/main/Python_FileSorter"
+    },
+    {
+      "title": "Crypto Data Scraper in Python",
+      "description": "In this project, I developed a Python script to retrieve real-time data of cryptocurrencies by making API calls to one exchange platform. The script collects essential information such as current prices, trading volumes, market capitalization, and more for many cryptocurrencies (can be pre-defined). This data is then structured and appended to a CSV file, providing a convenient method for tracking and analyzing crypto market trends",
+      "imageSrc": "images/crypto.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/tree/main/Python_CryptoScraping"
+    },
+    {
+      "title": "Data Career Survey Report in Power BI",
+      "description": "In this project, I utilized Power BI to create a comprehensive report based on survey data gauging individuals' satisfaction levels with their data-related jobs. The report includes visualizations such as charts, graphs, and interactive dashboards to showcase key insights derived from survey responses. These visualizations provide a clear understanding of factors influencing job satisfaction, including salary, work-life balance, career growth opportunities, and more.",
+      "imageSrc": "images/survey.jpg",
+      "altText": "",
+      "projectLink": "https://github.com/kayv297/DataPortfolioProject/tree/main/PowerBI_SurveyReport_Project"
+    },
+    {
+      "title": "Seattle's Airbnb 2016 Data Exploration in Tableau",
+      "description": "In this project, I utilized Tableau to create a detailed report on Seattle's Airbnb data from 2016. The report offers insights into various aspects of the Airbnb market in Seattle, including rental prices, availability, and popular neighborhoods. Through interactive visualizations such as maps, charts, and filters, users can explore trends and patterns within the dataset, enabling them to make informed decisions regarding accommodation options in Seattle",
+      "imageSrc": "images/airbnb.jpg",
+      "altText": "",
+      "projectLink": "https://public.tableau.com/app/profile/kha.vu/viz/Airbnb2016SeattleData/FinalDashboard#1"
+    }
+  ]
