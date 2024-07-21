@@ -167,7 +167,7 @@
 									`;
 								});
 								template.querySelector('.post-date').textContent = '  ' + post.date;
-								template.querySelector('.post-description').innerHTML = post.postcontent.length > 360 ? post.postcontent.slice(0, 360).replace(/\s+\S*$/, '...') : post.postcontent;
+								template.querySelector('.post-description').innerHTML = post.postcontent.replace(/<br\s*\/?>/gi, ' ').length > 300 ? post.postcontent.replace(/<br\s*\/?>/gi, ' ').slice(0, 300).replace(/\s+\S*$/, '...') : post.postcontent.replace(/<br\s*\/?>/gi, ' ');								template.querySelector('.post-tags').textContent = "Tags: " + post.tags.join(', ');
 								template.querySelector('.post-tags').textContent = "Tags: " + post.tags.join(', ');
 								template.querySelector('.read-more').addEventListener('click', function() {
 									// Populate the article content with the selected post

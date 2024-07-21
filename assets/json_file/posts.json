@@ -1,16 +1,14 @@
 [
-    {
-      "title": "Data Cleaning in SQL",
-      "postcontent": "Additionally, I split grouped data into individual columns, making the dataset easier to read and analyze. This project highlights my SQL skills in data cleaning and my attention to detail in preparing data for analysis. Additionally, I split grouped data into individual columns, making the dataset easier to read and analyze. This project highlights my SQL skills in data cleaning and my attention to detail in preparing data for analysis.",
-      "altText": "",
-      "date": "2021-09-01",
-      "tags": ["SQL", "Data Cleaning", "Python", "C++", "Algorithm", "Node.js"]
-    },
-    {
-        "title": "COVID-19 Data Exploration in SQL",
-        "postcontent": "A significant part of the project involved examining the correlation between deaths and vaccination counts. By analyzing this relationship, I identified trends and patterns that highlight the effectiveness of vaccination efforts. This project showcases my ability to use SQL for data exploration and derive meaningful insights from complex datasets.",
-        "altText": "",
-        "date": "2021-08-01",
-        "tags": ["SQL", "Data Exploration"]
-    }
-  ]
+  {
+    "title": "D1: Web update + Data Visualization",
+    "postcontent": "Today I've made some updates for this website after going through feedbacks.<br>Updates includes: Responsive resize for different screen size, Refine language option button.<br><br>Also, I've started the Data Visualization course from Google Data Analytics Certificate (which is the 6th out of 8 courses you have to complete to get the certificate).<br>Up until now, I've been thinking about visualizing data is a work of creativy, but there turns out to be more...<br>If you're creative and have lots of idea, that's a GREAT PLUS. However, I am not that creative and always struggling with what color to choose; do I have to follow a color palette, if so, which one to choose; is placing this chart here good; etc. (and I believe that there are many people like me). So there are many sets of rules that you can follow, and today I learnt the 'Design Thinking' concept, which has 5 steps: <ol><li><b>Empathize:</b> Consider target audience's needs and preferences for visualizing data</li><li><b>Define:</b>Finding out what the audience want to get from the data (i.e: what target are they focusing on). Ex: Whether temperature and ice cream sales are correlated?</li><li><b>Ideate:</b> Brainstroming how this visualization is going to be. Personally, I would recommend drawing your ideas out, no matter on paper, boards, or tablets, all will work just fine. The target is to let your ideas come out because you can't hold everything in your head. Just let them out and you'll finish this step faster comparing to not draw anything out.</li><li><b>Prototype:</b> Create the visualization! However, this one should be for giving to your folks to get feedbacks.</li><li><b>Test:</b> Show your prototype to people, and receive feedbacks</li></ol>But what after the 'Test' step? After going through all feedbacks, you should go back to step 3, recreate and refine your visualization until you get a nod from everyone.<br><br>I know it's going to take time, especially for people with not much creativity, but if you cannot catch up, you'll be left behind, and no one is going to feel sorry for you. It's like a test of whether you fit this field or not.<br><br>Stay heated! Thanks for coming here today!",
+    "date": "2024-07-22",
+    "tags": ["Data Visualization", "Desgin Thinking"]
+  },
+  {
+    "title": "A Great Start",
+    "postcontent": "Welcome!<br><br>Just call me Kay or Kha, whichever is good for you.<br>I'm now a sophomore at an international university in Japan (well, we study everything in English here, so my Japanese is not that good). My major is a mixture between Business and IT, but not double degrees.<br><br>I'm starting this blog to document my journey in learning new things everyday (for now is Data Analytics), and also some random thoughts that come to my mind daily. Therefore, the content of posts can be varied greatly, but most of it will relate somehow to the Technological field.<br><br>I hope you enjoy reading my blog!",
+    "date": "2024-07-22",
+    "tags": ["Thoughts"]
+  }
+]
