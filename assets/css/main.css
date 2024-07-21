@@ -115,10 +115,10 @@ input, select, textarea {
 		font-size: 16pt;
 	}
 
-		@media screen and (max-width: 1680px) {
+		@media screen and (max-width: 1400px) {
 
 			html {
-				font-size: 12pt;
+				font-size: 14pt;
 			}
 
 		}
@@ -172,6 +172,10 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2rem 0;
+	}
+
+	.info {
+		margin: 0 0 1.5rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1732,6 +1736,7 @@ repeat;
 
 		.text-container {
 			width: calc(100% - 250px);
+			height: auto;
 			display: inline-block;
 			white-space: normal;
 			vertical-align: top;
@@ -1741,7 +1746,7 @@ repeat;
 			width: 100%;
 			height: 350px;
 			white-space: nowrap;
-			margin-bottom: 3%;
+			margin-bottom: 5%;
 		  }
 		#myimage {
 			width: auto;
