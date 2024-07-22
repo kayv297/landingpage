@@ -1758,6 +1758,10 @@ repeat;
     		word-wrap: break-word;
 			max-width: 100%;
 		}
+		#inpost-img {
+			width: 100%;
+			height: auto;
+		}
 
 
 /* Footer */
