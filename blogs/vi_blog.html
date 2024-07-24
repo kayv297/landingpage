@@ -65,16 +65,6 @@
 			<!-- Main -->
 				<div id="main">
 					<article id="post">
-						<template inpost-template>
-							<p id="inpost-tags"></p>
-							<h2 class="major" id="inpost-title"></h2>
-							<div class="inpost-meta">
-								<i class="far fa-user"></i><span class="author-name">  Kay Vu</span>
-								      
-								<i class="far fa-calendar-alt"></i><span class="post-date"></span>
-							</div>
-							<p id="inpost-content" style="padding-top: 2rem;"></p>
-						</template>
 					</article>
 				</div>
 
@@ -163,8 +153,24 @@
 											      
 											<i class="far fa-calendar-alt"></i><span class="post-date">${post.date}</span>
 										</div>
-										<p id="inpost-content">${post.postcontent}</p>
+										${post.postcontent}
 									`;
+									var inpostImg = document.getElementById('inpost-img');
+									console.log(inpostImg)
+									if (inpostImg) {
+										// Get the width of the element
+										var width = inpostImg.offsetWidth;
+										console.log(width)
+
+										// Convert pixels to rem assuming the base font size is 16px
+										var widthInRem = width / 20;
+										console.log(widthInRem)
+										// Apply conditional styling
+										if (widthInRem > 50) {
+											inpostImg.style.width = '100%';
+										}
+										// If width is less than or equal to 50rem, no action is needed ('else' condition is 'pass')
+									}
 								});
 								template.querySelector('.post-date').textContent = '  ' + post.date;
 								template.querySelector('.post-description').innerHTML = post.postcontent.replace(/<br\s*\/?>/gi, ' ').length > 300 ? post.postcontent.replace(/<br\s*\/?>/gi, ' ').slice(0, 300).replace(/\s+\S*$/, '...') : post.postcontent.replace(/<br\s*\/?>/gi, ' ');								template.querySelector('.post-tags').textContent = "Tags: " + post.tags.join(', ');
@@ -179,8 +185,22 @@
 											      
 											<i class="far fa-calendar-alt"></i><span class="post-date">  ${post.date}</span>
 										</div>
-										<p id="inpost-content">${post.postcontent}</p>
+										${post.postcontent}
 									`;
+									var inpostImg = document.getElementById('inpost-img');
+									if (inpostImg) {
+										// Get the width of the element
+										var width = inpostImg.offsetWidth;
+
+										// Convert pixels to rem assuming the base font size is 16px
+										var widthInRem = width / 16;
+
+										// Apply conditional styling
+										if (widthInRem > 50) {
+											inpostImg.style.width = '100%';
+										}
+										// If width is less than or equal to 50rem, no action is needed ('else' condition is 'pass')
+									}
 								});
 								blogtable.append(template)
 								return {title: post.title, tags: post.tags, element: template}

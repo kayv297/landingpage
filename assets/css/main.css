@@ -726,7 +726,7 @@ input, select, textarea {
 
 	ol {
 		list-style: decimal;
-		margin: 0 0 2rem 0;
+		margin: 0.5rem 0 1rem 0;
 		padding-left: 1.25em;
 	}
 
@@ -736,7 +736,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2rem 0;
+		margin: 0.5rem 0 1rem 0;
 		padding-left: 1em;
 	}
 
@@ -1747,9 +1747,6 @@ repeat;
 			display: flex;
 			margin-bottom: 3%;
 		  }
-		#inpost-content {
-			margin: 1rem 0 2rem 0;
-		}
 		#inpost-tags {
 			color:rgba(255, 255, 255, 0.47)
 		}
@@ -1762,6 +1759,11 @@ repeat;
 			width: 100%;
 			height: auto;
 		}
+		#code-img {
+			width: 50%;
+			height: auto;
+			margin: 0.5rem 0 0.5rem 0;
+		}	
 
 
 /* Footer */

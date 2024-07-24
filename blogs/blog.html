@@ -65,16 +65,6 @@
 			<!-- Main -->
 				<div id="main">
 					<article id="post">
-						<template inpost-template>
-							<p id="inpost-tags"></p>
-							<h2 class="major" id="inpost-title"></h2>
-							<div class="inpost-meta">
-								<i class="far fa-user"></i><span class="author-name">  Kay Vu</span>
-								      
-								<i class="far fa-calendar-alt"></i><span class="post-date"></span>
-							</div>
-							<p id="inpost-content" style="padding-top: 2rem;"></p>
-						</template>
 					</article>
 				</div>
 
@@ -163,7 +153,7 @@
 											      
 											<i class="far fa-calendar-alt"></i><span class="post-date">${post.date}</span>
 										</div>
-										<p id="inpost-content">${post.postcontent}</p>
+										${post.postcontent}
 									`;
 								});
 								template.querySelector('.post-date').textContent = '  ' + post.date;
@@ -178,7 +168,7 @@
 											      
 											<i class="far fa-calendar-alt"></i><span class="post-date">  ${post.date}</span>
 										</div>
-										<p id="inpost-content">${post.postcontent}</p>
+										${post.postcontent}
 									`;
 								});
 								blogtable.append(template)
