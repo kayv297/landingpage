@@ -1771,7 +1771,9 @@ repeat;
 			font-size: 0.9rem;
 			margin: 0.5rem 0.25rem;
 			padding: 0.25rem 0.65rem;
-			width: 100%;
+			max-width: 100%;
+			white-space: normal;
+			word-wrap: break-word;
 		}
 
 
