@@ -173,7 +173,19 @@
 									}
 								});
 								template.querySelector('.post-date').textContent = '  ' + post.date;
-								template.querySelector('.post-description').innerHTML = post.postcontent.replace(/<br\s*\/?>/gi, ' ').length > 300 ? post.postcontent.replace(/<br\s*\/?>/gi, ' ').slice(0, 300).replace(/\s+\S*$/, '...') : post.postcontent.replace(/<br\s*\/?>/gi, ' ');								template.querySelector('.post-tags').textContent = "Tags: " + post.tags.join(', ');
+								template.querySelector('.post-description').innerHTML = post.postcontent
+									.replace(/<(?!br\s*\/?)[^>]+>/gi, '')  // Remove all HTML tags except <br>
+									.replace(/<br\s*\/?>/gi, ' ')  // Replace <br> tags with spaces
+									.replace(/\n/g, ' ')  // Remove newline characters
+									.length > 300 ? post.postcontent
+									.replace(/<(?!br\s*\/?)[^>]+>/gi, '')  // Remove all HTML tags except <br>
+									.replace(/<br\s*\/?>/gi, ' ')  // Replace <br> tags with spaces
+									.replace(/\n/g, ' ')  // Remove newline characters
+									.slice(0, 300)
+									.replace(/\s+\S*$/, '...') : post.postcontent
+									.replace(/<(?!br\s*\/?)[^>]+>/gi, '')  // Remove all HTML tags except <br>
+									.replace(/<br\s*\/?>/gi, ' ')  // Replace <br> tags with spaces
+									.replace(/\n/g, ' ');  // Remove newline characters
 								template.querySelector('.post-tags').textContent = "Tags: " + post.tags.join(', ');
 								template.querySelector('.read-more').addEventListener('click', function() {
 									// Populate the article content with the selected post

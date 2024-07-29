@@ -1775,7 +1775,9 @@ repeat;
 			white-space: normal;
 			word-wrap: break-word;
 		}
-
+		#inpost-link {
+			color: rgb(98, 98, 255);
+		}
 
 /* Footer */
 
