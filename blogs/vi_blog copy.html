@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kay Vu Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+			<!--Home Link-->
+			<div>
+				<a href="../vi_index.html" class="home-link"><i class="fa fa-home"></i></a>
+			</div>
+			<!--Language Selector-->
+			<div class="language-dropdown">
+				<select id="languageSelect" onchange="changeLanguage(this.value)">
+				<option value="en">EN</option>
+				<option value="vi" selected>VI</option>
+				<option value="ja">JP</option>
+				</select>
+			</div>
+		
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<header id="header", class="blog-header">
+			<div id="blog-container">
+				<div id="blog-posts" style="width: 70%;">
+					<!-- Blog posts content goes here -->
+					<h2 class="major">Posts</h2>
+					<template blogPostTemplate>
+						<div class="post">
+							<h3>
+								<a href="#post" class="post-link"></a>
+							</h3>
+							<div class="post-meta">
+								<i class="far fa-user"></i><span class="author-name">  Kay Vu</span>
+								      
+								<i class="far fa-calendar-alt"></i><span class="post-date"></span>
+							</div>
+							<p class="post-description" style="white-space: pre-wrap; padding-right: 3%;">Post Description</p>
+							<div class="action-container" style="display: flex; justify-content: space-between; align-items: center; height: 50px;">
+								<span class="post-tags" style="white-space: pre-wrap; max-width: 70%;">Tags: </span>
+								<a href="#post" class="button read-more" style="display: block; width: 170px; margin: 20px 10px 20px auto; text-align: center;">Read more</a>
+							</div>
+							<hr class="separator">
+						</div>
+					</template>
+				</div>
+			
+				<div id="sidebar" style="width: 30%; margin-top: 2rem;">
+					<!-- Search bar and list of tags goes here -->
+					<input type="search" id="search" post-search placeholder="Search posts...">
+					<h3>Tags you may like</h3>
+					<div id="tags-container"></div>
+				</div>
+			</div>
+			</header>
+				
+			<!-- Main -->
+				<div id="main">
+					<article id="post">
+					</article>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; 2024, Built by Kay Vu</p>
+				</footer>
+
+		</div>
+		<!-- BG -->
+			<div id="bg-blog" style="background: rgba(0,0,0,0.5);"></div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../https://cdn.emailjs.com/dist/email.min.js"></script>
+			<script type="text/javascript">
+				(function(){
+					emailjs.init("XgAzX7TZ9Had-QReY"); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+				})();
+				
+				function sendEmail(event) {
+					event.preventDefault(); // Prevent form submission
+					const form = event.target;
+					emailjs.sendForm('service_hh03sh5', 'template_ff1uo6c', form)
+						.then(function(response) {
+							console.log('SUCCESS!', response.status, response.text);
+							alert("Message sent successfully!");
+						}, function(error) {
+							console.log('FAILED...', error);
+							alert("Failed to send message. Please try again later.");
+						});
+				}
+				function changeLanguage(language) {
+					switch(language) {
+						case 'en':
+						window.location.href = 'blog.html'; // Replace with your actual English page URL
+						break;
+						case 'vi':
+						window.location.href = 'vi_blog.html'; // Replace with your actual Vietnamese page URL
+						break;
+						case 'ja':
+						window.location.href = 'jp_blog.html'; // Replace with your actual Japanese page URL
+						break;
+						default:
+						console.log("Language not supported.");
+					}
+				}
+			</script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function populatePosts() {
+					const blogtable = document.getElementById('blog-posts');
+					const postTemplate = document.querySelector("[blogPostTemplate]")
+					const searchInput = document.querySelector("[post-search]")
+					console.log(postTemplate)
+					
+					let posts_storage = []
+					searchInput.addEventListener("input", e => {
+						const value = e.target.value.toLowerCase()
+						posts_storage.forEach(post => {
+							const isVisible = 
+								post.title.toLowerCase().includes(value)
+							post.element.classList.toggle("hide", !isVisible)
+						})
+					})
+
+					fetch('../assets/json_file/vi_posts.json') // Adjust the path to where your JSON file is stored
+						.then(response => response.json())
+						.then(postsData => {
+							// Iterate over each project in the JSON data
+							posts_storage = postsData.map(post => {
+								const template = postTemplate.content.cloneNode(true).children[0];
+								console.log(template)
+
+								template.querySelector('.post-link').textContent = post.title;
+								template.querySelector('.post-link').addEventListener('click', function() {
+									// Populate the article content with the selected post
+									document.querySelector('#post').innerHTML = `
+										<p id="inpost-tags">Tags: ${post.tags.join(', ')}</p>
+										<h2 class="major" id="inpost-title">${post.title}</h2>
+										<div class="inpost-meta">
+											<i class="far fa-user"></i><span class="author-name">  Kay Vu</span>
+											      
+											<i class="far fa-calendar-alt"></i><span class="post-date">${post.date}</span>
+										</div>
+										${post.postcontent}
+									`;
+									var inpostImg = document.getElementById('inpost-img');
+									console.log(inpostImg)
+									if (inpostImg) {
+										// Get the width of the element
+										var width = inpostImg.offsetWidth;
+										console.log(width)
+
+										// Convert pixels to rem assuming the base font size is 16px
+										var widthInRem = width / 20;
+										console.log(widthInRem)
+										// Apply conditional styling
+										if (widthInRem > 50) {
+											inpostImg.style.width = '100%';
+										}
+										// If width is less than or equal to 50rem, no action is needed ('else' condition is 'pass')
+									}
+								});
+								template.querySelector('.post-date').textContent = '  ' + post.date;
+								template.querySelector('.post-description').innerHTML = post.postcontent
+									.replace(/<(?!br\s*\/?)[^>]+>/gi, '')  // Remove all HTML tags except <br>
+									.replace(/<br\s*\/?>/gi, ' ')  // Replace <br> tags with spaces
+									.replace(/\n/g, ' ')  // Remove newline characters
+									.length > 300 ? post.postcontent
+									.replace(/<(?!br\s*\/?)[^>]+>/gi, '')  // Remove all HTML tags except <br>
+									.replace(/<br\s*\/?>/gi, ' ')  // Replace <br> tags with spaces
+									.replace(/\n/g, ' ')  // Remove newline characters
+									.slice(0, 300)
+									.replace(/\s+\S*$/, '...') : post.postcontent
+									.replace(/<(?!br\s*\/?)[^>]+>/gi, '')  // Remove all HTML tags except <br>
+									.replace(/<br\s*\/?>/gi, ' ')  // Replace <br> tags with spaces
+									.replace(/\n/g, ' ');  // Remove newline characters
+								template.querySelector('.post-tags').textContent = "Tags: " + post.tags.join(', ');
+								template.querySelector('.read-more').addEventListener('click', function() {
+									// Populate the article content with the selected post
+									document.querySelector('#post').innerHTML = `
+										<p id="inpost-tags">${post.tags.join(', ')}</p>
+										<h2 class="major" id="inpost-title">${post.title}</h2>
+										<div class="inpost-meta">
+											<i class="far fa-user"></i><span class="author-name">  Kay Vu</span>
+											      
+											<i class="far fa-calendar-alt"></i><span class="post-date">  ${post.date}</span>
+										</div>
+										${post.postcontent}
+									`;
+									var inpostImg = document.getElementById('inpost-img');
+									if (inpostImg) {
+										// Get the width of the element
+										var width = inpostImg.offsetWidth;
+
+										// Convert pixels to rem assuming the base font size is 16px
+										var widthInRem = width / 16;
+
+										// Apply conditional styling
+										if (widthInRem > 50) {
+											inpostImg.style.width = '100%';
+										}
+										// If width is less than or equal to 50rem, no action is needed ('else' condition is 'pass')
+									}
+								});
+								blogtable.append(template)
+								return {title: post.title, tags: post.tags, element: template}
+							});
+						})
+						.catch(error => {
+							console.error('Error loading project data:', error);
+							workArticle.innerHTML = '<p>Error loading project data.</p>';
+						});
+					
+				});
+				// Assuming jQuery for simplicity, but can be done with vanilla JS as well
+				document.addEventListener('DOMContentLoaded', function() {
+					fetch('../assets/json_file/vi_posts.json')
+						.then(response => response.json())
+						.then(posts => {
+							const allTags = posts.flatMap(post => post.tags);
+							const uniqueTags = [...new Set(allTags)].sort((a, b) => b.localeCompare(a));
+							const sidebar = document.querySelector('#sidebar h3');
+							let selectedTags = []; // Step 1: Initialize selected tags array
+
+							uniqueTags.forEach(tag => {
+								const tagElement = document.createElement('button');
+								tagElement.textContent = tag;
+								tagElement.classList.add('tag');
+								sidebar.insertAdjacentElement('afterend', tagElement);
+
+								tagElement.addEventListener('click', function() {
+									// Step 2: Toggle tag selection
+									if (selectedTags.includes(tag)) {
+										selectedTags = selectedTags.filter(t => t !== tag);
+										tagElement.classList.remove('selected'); // Optional: Visual feedback
+									} else {
+										selectedTags.push(tag);
+										tagElement.classList.add('selected'); // Optional: Visual feedback
+									}
+
+									// Step 3: Filter and show posts
+									const postElements = document.querySelectorAll('.post');
+									postElements.forEach((postElement, index) => {
+										const post = posts[index];
+										console.log(post);
+										// Check if the current post includes all selected tags
+										if (selectedTags.every(tag => post.tags.includes(tag))) {
+											postElement.classList.remove('hide');
+										} else {
+											postElement.classList.add('hide');
+										}
+									});
+								});
+							});
+						});
+						
+						
+					});
+			</script>
+
+	</body>
+</html>
