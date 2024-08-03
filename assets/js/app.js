@@ -19,7 +19,7 @@ async function fetchData() {
     console.log(supabase)
     console.log(postsData)
 
-    postsData.reverse();
+    postsData.sort((a, b) => b.id - a.id);
 
     // Iterate over each project in the JSON data
     const blogtable = document.getElementById('blog-posts');
